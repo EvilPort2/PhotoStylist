@@ -4,7 +4,7 @@ Stylizing yours photos using neural style transfer.
 ## Huge thanks to The Lazy Programmer without whose Udemy course this project would have not been possible.
 
 ## Outcome
-Watch it <a href=''>here</a>.
+Watch it <a href='https://youtu.be/pisXtDwLVoU'>here</a>.
 
 ## Requirements
 0. Python 3.x
