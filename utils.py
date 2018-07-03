@@ -6,6 +6,7 @@ import numpy as np
 import cv2
 from scipy.optimize import fmin_l_bfgs_b
 
+
 def VGG16_AvgPool(shape):
 	vgg16 = VGG16(input_shape=shape, weights='imagenet', include_top=False)
 	model = Sequential()
@@ -18,14 +19,12 @@ def VGG16_AvgPool(shape):
 
 def load_and_preprocess_content(shape):
 	content = load_content_image(shape)
-	#shape = content.shape[1:]
 	content = np.expand_dims(content, axis=0)
 	content = preprocess_input(content)
 	return content
 
 def load_and_preprocess_style(shape):
 	style = load_style_image(shape)
-	#shape = style.shape[1:]
 	style = np.expand_dims(style, axis=0)
 	style = preprocess_input(style)
 	return style

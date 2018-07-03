@@ -20,9 +20,7 @@ Using this repo is very easy. First put your content and style images in the con
 
     python photo_stylist.py
 
-You will be asked to select the content image from the content folder and the style image from the style folder. After selecting them you are good to go.
-
-In case you are a developer and you are not satisfied with the resultant image open up the photo_stylist.py and tweak the tweakable parameters.
+You will be asked to select the content image from the content folder and the style image from the style folder. After selecting them you are good to go. You can give the optional parameters if you wish or just press enter to give the default values.
 
 ## Limitations
 I don't know if this exactly qualifies as a limitation but I am stil going to put it here. Since neural style tranfer is a resource intensive task, having a good CPU with a good GPU is highly recommended. In my Asus A541UJ which has a NVidia 920M graphics card, 4 GB RAM and Intel Core i3 2GHz processor any content image bigger than 500x500 px crashed the program due to non memory allocation. I don't know about any other specifications though.

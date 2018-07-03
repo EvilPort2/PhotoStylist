@@ -33,7 +33,10 @@ def load_content_image(shape=None):
 			if shape != None:
 				content_image = cv2.resize(content_image, (shape[1], shape[0]))
 			else:
-				content_image = cv2.resize(content_image, None, fx=0.5, fy=0.5)
+				if abs(content_image.shape[0]-content_image.shape[1]) > 50:
+					content_image = cv2.resize(content_image, None, fx=0.5, fy=0.5)
+				else:
+					content_image = cv2.resize(content_image, (500, 500))
 		break
 	return content_image
 
@@ -60,5 +63,4 @@ def load_style_image(shape=None):
 		else:
 			style_image = cv2.resize(style_image, None, fx=0.5, fy=0.5)
 		break
-
 	return style_image
