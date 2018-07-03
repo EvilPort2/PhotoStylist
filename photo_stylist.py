@@ -46,7 +46,7 @@ else:
 vgg = VGG16_AvgPool(shape)
 vgg.summary()
 conv_layers = [0,1,2,4,5,7,8,9,11,12,13,15,16,17]
-content_model = Model(vgg.input, vgg.layers[conv_layers[conv_n]].get_output_at(1))
+content_model = Model(vgg.input, vgg.layers[conv_layers[conv_n]].get_output_at(0))
 content_target = K.variable(content_model.predict(content_image))
 
 symbolic_conv_outputs = [layer.get_output_at(1) for layer in vgg.layers if layer.__class__ == Conv2D]
