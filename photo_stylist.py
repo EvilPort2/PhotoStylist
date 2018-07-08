@@ -8,7 +8,6 @@ from utils import minimize_loss, load_and_preprocess_style, load_and_preprocess_
 from style_model import style_loss
 from content_model import VGG16_AvgPool_CutOff
 import time
-import pyautogui as gui
 import sys, os
 
 if os.name == 'nt':
